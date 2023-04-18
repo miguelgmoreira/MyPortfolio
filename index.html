@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="imagens/eu.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- navegação -->
+    <div class="navbar">
+        <ul class="nav-items">
+            <li><a href="#home">home</a></li>
+            <li><a href="#habilidades">habilidades</a> </a></li>
+            <li><a href="#projetos">projetos</a></li>
+            <li><a href="#sobre">sobre</a></li>
+            <li><a href="#contato">contato</a></li>
+        </ul>
+    </div>
+    <!-- home -->
+    <section class="home">
+        <div class="cols">
+            <span class="linha-de-cima">Olá</span>
+            <h1>Eu sou <span class="texto"></span></h1>
+            <p>Bem vindo ao meu portfólio! Meu nome é Miguel e sou Web developer. Aqui você poderá ver meus projetos,
+                minhas skills atuais,
+                minhas informações de contato e um breve resumo sobre mim.</p>
+            <button class="trabalhar-juntos">Vamos trabalhar juntos</button>
+        </div>
+    </section>
+    <!-- habilidades -->
+    <section class="habilidades">
+        <div class="titulo-box">
+            <h2>Habilidades</h2>
+        </div>
+        <div class="box-habilidades">
+            <div class="box">
+                <h3>Habilidades técnicas</h3>
+                <ul class="li">javaScript <i class="fa-brands fa-square-js" style="color: #f0db4f;"></i></ul>
+                <ul class="li">HTML 5 <i class="fa-brands fa-html5" style="color: #e34c1c;"></i></ul>
+                <ul class="li">Css 3 <i class="fa-brands fa-css3-alt" style="color: #264de4;"></i></ul>
+            </div>
+            <div class="box">
+                <h3>Ferramentas</h3>
+                <ul class="li">Vs Code <i class="fa-solid fa-screwdriver-wrench" style="color: #0078d7;"></i></ul>
+                <ul class="li">Git <i class="fa-brands fa-square-git" style="color: #f1502f;"></i></ul>
+                <ul class="li">Github <i class="fa-brands fa-square-github" style="color: #000000;"></i></ul>
+            </div>
+            <div class="box">
+                <h3>Outras habilidades</h3>
+                <ul class="li">Boa comunicação <i class="fa-solid fa-check"></i></ul>
+                <ul class="li">Inglês avançado <i class="fa-solid fa-check"></i></ul>
+                <ul class="li">Rápido aprendizado e adaptação <i class="fa-solid fa-check"></i></ul>
+                <ul class="li">Capacidade de absorver críticas <i class="fa-solid fa-check"></i></ul>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- projetos -->
+    <section class="projetos">
+        <div class="titulo-box">
+            <h2>Projetos</h2>
+        </div>
+        <div class="box-projetos">
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                <h3>Em breve</h3>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                <h3>Em breve</h3>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-lock"></i></div>
+                <h3>Em breve</h3>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3ce39e5ff7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+        const efeitoDigitando = new Typed('.texto', {
+            strings: ['Miguel', 'Web developer'],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        })
+
+        const defaulLink = document.querySelector(".nav-items a[href='#home']")
+        defaulLink && defaulLink.classList.add('selected')
+
+        window.onhashchange = function (e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            const oldLink = document.querySelector(`.nav-items a[href='#${oldURL}']`)
+            const newLink = document.querySelector(`.nav-items a[href='#${newURL}']`)
+            defaulLink && defaulLink.classList.remove('selected')
+            oldLink && oldLink.classList.remove('selected')
+            newLink && newLink.classList.add('selected')
+        }
+    </script>
+</body>
+
+</html>
