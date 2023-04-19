@@ -8,6 +8,9 @@
     outline: none;
 }
 
+body {
+    background-color: #0d1b2a;
+}
 
 .navbar {
     display: flex;
@@ -119,10 +122,7 @@ button:hover {
 
 .habilidades {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #0d1b2a;
+    padding-top: 150px;
 }
 
 .box-habilidades {
@@ -152,16 +152,15 @@ button:hover {
 
 .titulo-box{
     width: fit-content;
+    font-size: 30px;
     color: #48bfe3;
     margin-left: 100px;
     border-bottom: 2px solid #48bfe3;
-    font-size: 30px;
 }
 
 .projetos {
     text-align: center;
     height: 90vh;
-    background-color: #0d1b2a;
 }
 
 .box-projetos {
@@ -182,7 +181,7 @@ button:hover {
 }
 
 .box:hover {
-    box-shadow: 0px 3px 25px #8d99ae;
+    box-shadow: 0px 3px 25px #48bfe3;
 }
 
 .box .icon {
@@ -211,4 +210,47 @@ button:hover {
 .read-more-btn:hover {
     background-color: #48bfe3;
     box-shadow: 0px 3px 25px #8d99ae;
+}
+
+.sobre {
+    height: 90vh;
+    text-align: center;
+}
+
+.sobre .titulo-box {
+    display: inline-block;
+    margin: 0;
+}
+
+.about-box {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 300px 5px 300px;
+}
+
+.about-box img{
+    position: relative;
+    height: 50%;
+    border-radius: 20px;
+    box-shadow: 0px 3px 25px #48bfe3;
+}
+
+.about-box span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box span h3 {
+    color: #48bfe3;
+}
+
+.about-box span p {
+    color: #EDF2F4;
 }
