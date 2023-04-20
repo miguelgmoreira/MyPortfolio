@@ -46,13 +46,17 @@ header {
     text-transform: capitalize;
 }
 
-.navbar li a:hover,
-.navbar li a.selected{
+.navbar li a:hover{
     color: #48bfe3;
     border-bottom: 2px solid #48bfe3;
 }
 
-.home {
+#active {
+    color: #48bfe3;
+    border-bottom: 2px solid #48bfe3;
+}
+
+#home {
     display: flex;
     width: 100%;
     height: 90vh;
@@ -122,12 +126,19 @@ p {
     box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
 }
 
+.social {
+    padding: 0 8px;
+}
+
+.social a {
+    font-size: 30px;
+}
 
 button:hover {
     background-color: #0d1b2a;
 }
 
-.habilidades {
+#habilidades {
     padding-top: 150px;
 }
 
@@ -160,7 +171,7 @@ button:hover {
     border-bottom: 2px solid #48bfe3;
 }
 
-.projetos {
+#projetos {
     text-align: center;
 }
 
@@ -216,11 +227,11 @@ button:hover {
     color: #0d1b2a;
 }
 
-.sobre {
+#sobre {
     text-align: center;
 }
 
-.sobre .titulo-box {
+#sobre .titulo-box {
     display: inline-block;
     margin: 0;
 }
@@ -257,12 +268,12 @@ button:hover {
     color: #EDF2F4;
 }
 
-.contato {
+#contato {
     text-align: center;
     width: 100%;
 }
 
-.contato .titulo-box {
+#contato .titulo-box {
     display: inline-block;
     margin: 0;
 }
@@ -291,6 +302,7 @@ button:hover {
     font-size: 20px;
     text-align: start;
 }
+
 
 .form-group input,
 .form-group textarea {

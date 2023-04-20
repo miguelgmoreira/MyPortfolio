@@ -14,27 +14,33 @@
     <header>
         <div class="navbar">
             <ul>
-                <li><a href="#home" class="active">home</a></li>
-                <li><a href="#habilidades">habilidades</a> </a></li>
-                <li><a href="#sobre">sobre</a></li>
-                <li><a href="#projetos">projetos</a></li>
-                <li><a href="#contato">contato</a></li>
+                <li><a href="#home" class="home">home</a></li>
+                <li><a href="#habilidades" class="habilidades">habilidades</a> </a></li>
+                <li><a href="#projetos" class="projetos">projetos</a></li>
+                <li><a href="#sobre" class="sobre">sobre</a></li>
+                <li><a href="#contato" class="contato">contato</a></li>
             </ul>
         </div>
     </header>
     <!-- home -->
-    <section class="home" id="home">
+    <section id="home">
         <div class="cols">
             <span class="linha-de-cima">Olá</span>
             <h1>Eu sou <span class="texto"></span></h1>
             <p>Bem vindo ao meu portfólio! Meu nome é Miguel e sou Web developer. Aqui você poderá ver meus projetos,
                 minhas skills atuais,
                 minhas informações de contato e um breve resumo sobre mim.</p>
-            <button class="trabalhar-juntos">Vamos trabalhar juntos</button>
+            <a href="#contato"><button class="trabalhar-juntos">Vamos trabalhar juntos</button></a>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/miguel-garcia-68bb6126b/" class="linkedin"><i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i></a>
+                <a href="https://github.com/miguelgmoreira" class="github"><i class="fa-brands fa-square-github" style="color: #000000;"></i></a>
+                <a href=" https://wa.me/5561996429976" class="whatsapp"><i class="fa-brands fa-square-whatsapp" style="color: #25d366;"></i></a>
+                <a href="https://www.instagram.com/fiuza._/" class="instagram"><i class="fa-brands fa-square-instagram" style="color: #cc2366;"></i></a>
+            </div>
         </div>
     </section>
     <!-- habilidades -->
-    <section class="habilidades" id="habilidades">
+    <section id="habilidades">
         <div class="titulo-box">
             <h2>Habilidades</h2>
         </div>
@@ -61,7 +67,7 @@
     </section>
     </div>
     <!-- projetos -->
-    <section class="projetos" id="projetos">
+    <section id="projetos">
         <div class="titulo-box">
             <h2>Projetos</h2>
         </div>
@@ -96,7 +102,7 @@
         <span class="read-more-btn">Ver Mais</span>
     </section>
     <!-- sobre -->
-    <section class="sobre" id="sobre">
+    <section id="sobre">
         <div class="titulo-box">
             <h2>Sobre</h2>
         </div>
@@ -123,7 +129,7 @@
         </div>
     </section>
     <!-- contato -->
-    <section class="contato" id="contato">
+    <section id="contato">
         <div class="titulo-box">
             <h2>Contato</h2>
         </div>
@@ -137,21 +143,22 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="telefone">Telefone</label>
+                        <label for="telefone">Telefone <i class="fa-solid fa-phone" style="color: #34a853;"></i></label>
                         <input type="number" name="telefone">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email <i class="fa-regular fa-envelope" style="color: #ea4335;"></i></label>
                         <input type="text" name="email">
                     </div>
 
                     <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
+                        <label for="mensagem">Mensagem <i class="fa-regular fa-message"
+                                style="color: #edf2f4;"></i></label>
                         <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
                     </div>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
                 </form>
             </div>
             <div id="status"></div>
@@ -170,18 +177,6 @@
             backDelay: 1500
         })
 
-        const defaulLink = document.querySelector(".navbar a[href='#home']")
-        defaulLink && defaulLink.classList.add('selected')
-
-        window.onhashchange = function (e) {
-            const oldURL = e.oldURL.split('#')[1]
-            const newURL = e.newURL.split('#')[1]
-            const oldLink = document.querySelector(`.navbar a[href='#${oldURL}']`)
-            const newLink = document.querySelector(`.navbar a[href='#${newURL}']`)
-            defaulLink && defaulLink.classList.remove('selected')
-            oldLink && oldLink.classList.remove('selected')
-            newLink && newLink.classList.add('selected')
-        }
     </script>
 </body>
 
