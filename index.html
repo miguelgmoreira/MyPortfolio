@@ -11,17 +11,19 @@
 
 <body>
     <!-- navegação -->
-    <div class="navbar">
-        <ul class="nav-items">
-            <li><a href="#home">home</a></li>
-            <li><a href="#habilidades">habilidades</a> </a></li>
-            <li><a href="#projetos">projetos</a></li>
-            <li><a href="#sobre">sobre</a></li>
-            <li><a href="#contato">contato</a></li>
-        </ul>
-    </div>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="#home" class="active">home</a></li>
+                <li><a href="#habilidades">habilidades</a> </a></li>
+                <li><a href="#sobre">sobre</a></li>
+                <li><a href="#projetos">projetos</a></li>
+                <li><a href="#contato">contato</a></li>
+            </ul>
+        </div>
+    </header>
     <!-- home -->
-    <section class="home">
+    <section class="home" id="home">
         <div class="cols">
             <span class="linha-de-cima">Olá</span>
             <h1>Eu sou <span class="texto"></span></h1>
@@ -32,7 +34,7 @@
         </div>
     </section>
     <!-- habilidades -->
-    <section class="habilidades">
+    <section class="habilidades" id="habilidades">
         <div class="titulo-box">
             <h2>Habilidades</h2>
         </div>
@@ -45,7 +47,6 @@
             </div>
             <div class="box">
                 <h3>Ferramentas</h3>
-                <ul class="li">Vs Code <i class="fa-solid fa-screwdriver-wrench" style="color: #0078d7;"></i></ul>
                 <ul class="li">Git <i class="fa-brands fa-square-git" style="color: #f1502f;"></i></ul>
                 <ul class="li">Github <i class="fa-brands fa-square-github" style="color: #000000;"></i></ul>
             </div>
@@ -60,7 +61,7 @@
     </section>
     </div>
     <!-- projetos -->
-    <section class="projetos">
+    <section class="projetos" id="projetos">
         <div class="titulo-box">
             <h2>Projetos</h2>
         </div>
@@ -94,25 +95,66 @@
         </div>
         <span class="read-more-btn">Ver Mais</span>
     </section>
-    <section class="sobre">
+    <!-- sobre -->
+    <section class="sobre" id="sobre">
         <div class="titulo-box">
             <h2>Sobre</h2>
         </div>
         <div class="about-box">
             <img src="images/img1.jpeg" alt="foto Miguel">
             <span>
-            <h3>Olá de novo, eu sou Miguel &#128075.</h3><br>
-            <p>Eu sou um desenvolvedor Web interessado em como as pessoas e os softwares podem trabalhar juntos para fazer a vida melhor. Como designer, que é uma importante parte da profissão, busco sempre produzir um design moderno e intuitivo.
-                <br>
-                <br>
-                Valorizo aplicações com um design atrativo e um sistema inteligente por trás. Gosto de pensar que um produto digital é algo que deve evoluir e se moldar as suas necessidades.
-                <br>
-                <br>
-                Fora da programação, adoro comida, esportes, filmes e games. Gasto meu tempo livre com as pessoas que gosto e estou sempre pensando na minha próxima refeição.
-                <br><br>
-                Tenho 18 anos e como todo mundo da minha idade possuo vários sonhos e metas, dentre elas buscar sempre ser a melhor versão de mim mesmo!
-            </p>
+                <h3>Olá de novo, eu sou Miguel &#128075.</h3><br>
+                <p>Eu sou um desenvolvedor Web interessado em como as pessoas e os softwares podem trabalhar juntos para
+                    fazer a vida melhor. Como designer, que é uma importante parte da profissão, busco sempre produzir
+                    um design moderno e intuitivo.
+                    <br>
+                    <br>
+                    Valorizo aplicações com um design atrativo e um sistema inteligente por trás. Gosto de pensar que um
+                    produto digital é algo que deve evoluir e se moldar as suas necessidades.
+                    <br>
+                    <br>
+                    Fora da programação, adoro comida, esportes, filmes e games. Gasto meu tempo livre com as pessoas
+                    que gosto e estou sempre pensando na minha próxima refeição.
+                    <br><br>
+                    Tenho 18 anos e como qualquer um da minha idade possuo vários sonhos e metas, dentre elas buscar
+                    sempre ser a melhor versão de mim mesmo!
+                </p>
             </span>
+        </div>
+    </section>
+    <!-- contato -->
+    <section class="contato" id="contato">
+        <div class="titulo-box">
+            <h2>Contato</h2>
+        </div>
+        <div class="form-container">
+            <div class="form-box">
+                <form action="https://formspree.io/f/xqkowpql" method="POST" id="my-form">
+
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="number" name="telefone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div id="status"></div>
         </div>
     </section>
 
@@ -128,14 +170,14 @@
             backDelay: 1500
         })
 
-        const defaulLink = document.querySelector(".nav-items a[href='#home']")
+        const defaulLink = document.querySelector(".navbar a[href='#home']")
         defaulLink && defaulLink.classList.add('selected')
 
         window.onhashchange = function (e) {
             const oldURL = e.oldURL.split('#')[1]
             const newURL = e.newURL.split('#')[1]
-            const oldLink = document.querySelector(`.nav-items a[href='#${oldURL}']`)
-            const newLink = document.querySelector(`.nav-items a[href='#${newURL}']`)
+            const oldLink = document.querySelector(`.navbar a[href='#${oldURL}']`)
+            const newLink = document.querySelector(`.navbar a[href='#${newURL}']`)
             defaulLink && defaulLink.classList.remove('selected')
             oldLink && oldLink.classList.remove('selected')
             newLink && newLink.classList.add('selected')

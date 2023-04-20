@@ -1,46 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
     font-family: 'poppins';
     outline: none;
+}
+
+section {
+    height: 100vh;
 }
 
 body {
     background-color: #0d1b2a;
 }
 
-.navbar {
-    display: flex;
+header {
     width: 100%;
-    justify-content: space-around;
     height: 80px;
-    line-height: 80px;
-    z-index: 111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
     position: fixed;
 }
 
-.nav-items {
+.navbar ul{
     display: flex;
-
 }
 
-.nav-items li {
-    margin: 0 15px;
-    list-style: none;
+.navbar ul li {
+    padding: 0 15px;
 }
 
-.nav-items li a {
+.navbar li a {
+    display: block;
     font-size: 1.2em;
     color: #8da9c4;
-    text-decoration: none;
     text-transform: capitalize;
 }
 
-.nav-items li a:hover,
-.nav-items li a.selected {
+.navbar li a:hover,
+.navbar li a.selected{
     color: #48bfe3;
     border-bottom: 2px solid #48bfe3;
 }
@@ -121,7 +128,6 @@ button:hover {
 }
 
 .habilidades {
-    height: 100vh;
     padding-top: 150px;
 }
 
@@ -146,10 +152,6 @@ button:hover {
     padding-top: 15px;
 }
 
-.box-habilidades .box:hover {
-    box-shadow: 0px 3px 25px #8d99ae;
-}
-
 .titulo-box{
     width: fit-content;
     font-size: 30px;
@@ -160,7 +162,6 @@ button:hover {
 
 .projetos {
     text-align: center;
-    height: 90vh;
 }
 
 .box-projetos {
@@ -178,6 +179,7 @@ button:hover {
     box-shadow: 0px 3px 8px #000;
     width: 33.33%;
     background-color: #EDF2F4;
+    transition: .3s ease box-shadow;
 }
 
 .box:hover {
@@ -205,15 +207,16 @@ button:hover {
     cursor: pointer;
     border: 2px solid #48bfe3;
     padding: 5px 10px;
+    transition: .3s ease;
 }
 
 .read-more-btn:hover {
     background-color: #48bfe3;
     box-shadow: 0px 3px 25px #8d99ae;
+    color: #0d1b2a;
 }
 
 .sobre {
-    height: 90vh;
     text-align: center;
 }
 
@@ -223,7 +226,6 @@ button:hover {
 }
 
 .about-box {
-    margin-top: 30px;
     position: relative;
     width: 100%;
     height: 80%;
@@ -253,4 +255,110 @@ button:hover {
 
 .about-box span p {
     color: #EDF2F4;
+}
+
+.contato {
+    text-align: center;
+    width: 100%;
+}
+
+.contato .titulo-box {
+    display: inline-block;
+    margin: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-box {
+    margin: 20px;
+    padding: 10px 30px;
+    border: solid 3px #48bfe3;
+    box-shadow: 0px 3px 15px #000;
+    border-radius: 15px;
+    color: #48bfe3;
+    max-width: 500px;
+}
+
+.form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: start;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 24px;
+    color: #48bfe3;
+    cursor: pointer;
+    transition: .3s ease ;
+}
+
+button[type="submit"]:hover {
+    color: #0d1b2a;
+    background-color: #48bfe3;
+    box-shadow: 0px 3px 15px #8d99ae;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#status.sucesso {
+    background-color: #38b000;
+    color: #EDF2F4;
+    animation: status 3s ease forwards;
+}
+
+#status.erro {
+    background-color: #d00000;
+    color: #EDF2F4;
+    animation: status 3s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
