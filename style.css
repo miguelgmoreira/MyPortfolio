@@ -13,10 +13,6 @@ html{
     outline: none;
 }
 
-section {
-    height: 100vh;
-}
-
 body {
     background-color: #0d1b2a;
 }
@@ -25,47 +21,42 @@ body {
 
 header {
     position: fixed;
-    z-index: 5;
     width: 100%;
-    padding: 10px 0;
-}
-
-header .container {
-    max-width: 1250px;
-    margin: auto;
-    padding: 0 30px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: transparent;
+    padding: 22px 15%;
+    transition: all .45s ease;
 }
 
-header .logo {
-    font-size: 30px;
-    color: #3d535f;
-    margin: 20px;
-    padding: 15px 0;
-}
-
-header .logo span {
+.logo {
     color: #48bfe3;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-nav ul{
+.logo span{
+    color: #3d535f;
+}
+
+.navlist {
     display: flex;
 }
 
-nav ul li {
-    padding: 0 15px;
+.navlist a {
+    color: #8d99ae;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 25px;
+    transition: all .45s ease;
 }
 
-nav li a {
-    display: block;
-    font-size: 1.2em;
-    color: #8da9c4;
-    text-transform: capitalize;
-}
-
-nav li a:hover{
+.navlist a:hover{
     color: #48bfe3;
     border-bottom: 2px solid #48bfe3;
 }
@@ -75,20 +66,40 @@ nav li a:hover{
     border-bottom: 2px solid #48bfe3;
 }
 
+#menu-icon {
+    color: #48bfe3;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    margin: left 25px;
+    display: none;
+}
+
+section {
+    padding: 160px 10% 120px;
+}
+
 /* home */
 
 #home {
-    display: flex;
+    /* display: flex;
     width: 100%;
     height: 90vh;
     justify-content: left;
     align-items: center;
     padding: 0 10%;
-    overflow: hidden;
+    overflow: hidden; */
+    position: relative;
+    height: 90vh;
+    width: 100%;
     background-color: #EDF2F4;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
-.cols {
+
+.conteudo {
     width: 70%;
 }
 
@@ -231,6 +242,7 @@ button:hover {
 #projetos {
     height: 100vh;
     text-align: center;
+    padding: 160px 5% 120px;
 }
 
 .box-projetos {
@@ -277,6 +289,7 @@ button:hover {
     border: 2px solid #48bfe3;
     padding: 5px 10px;
     transition: .3s ease;
+    z-index: 4;
 }
 
 .read-more-btn:hover {
@@ -304,7 +317,6 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 300px 5px 300px;
 }
 
 .about-box img{
@@ -360,7 +372,6 @@ button:hover {
 }
 
 .form-group {
-    margin-top: 20px;
     font-size: 20px;
     text-align: start;
 }

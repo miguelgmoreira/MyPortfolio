@@ -18,7 +18,7 @@ parentContainer.addEventListener('click', event => {
 
 // scrollspy
 
-const defaulLink = document.querySelector(".navbar a[href='#home']")
+const defaulLink = document.querySelector(".navlist a[href='#home']")
 defaulLink && defaulLink.setAttribute('id', 'active')
 
 let home = document.querySelector('#home')
