@@ -31,7 +31,6 @@ window.addEventListener('scroll', () => {
   var windo = window.pageYOffset
 
   if (habilidades.offsetTop <= windo && projetos.offsetTop > windo) {
-      console.log(habilidades)
       document.querySelector('.habilidades').setAttribute('id', 'active')
       document.querySelector('.sobre').removeAttribute('id', 'active')
       document.querySelector('.projetos').removeAttribute('id', 'active')
@@ -39,7 +38,6 @@ window.addEventListener('scroll', () => {
       document.querySelector('.home').removeAttribute('id', 'active')
   }
   else if (projetos.offsetTop <= windo && sobre.offsetTop > windo) {
-      console.log(sobre)
       document.querySelector('.projetos').setAttribute('id', 'active')
       document.querySelector('.habilidades').removeAttribute('id', 'active')
       document.querySelector('.sobre').removeAttribute('id', 'active')
@@ -47,7 +45,6 @@ window.addEventListener('scroll', () => {
       document.querySelector('.home').removeAttribute('id', 'active')
   }
   else if (sobre.offsetTop <= windo && contato.offsetTop > windo) {
-      console.log(projetos)
       document.querySelector('.sobre').setAttribute('id', 'active')
       document.querySelector('.habilidades').removeAttribute('id', 'active')
       document.querySelector('.projetos').removeAttribute('id', 'active')
@@ -55,7 +52,6 @@ window.addEventListener('scroll', () => {
       document.querySelector('.home').removeAttribute('id', 'active')
   }
   else if (contato.offsetTop <= windo) {
-      console.log(contato)
       document.querySelector('.contato').setAttribute('id', 'active')
       document.querySelector('.habilidades').removeAttribute('id', 'active')
       document.querySelector('.projetos').removeAttribute('id', 'active')
@@ -63,7 +59,6 @@ window.addEventListener('scroll', () => {
       document.querySelector('.home').removeAttribute('id', 'active')
   }
   else {
-      console.log(home)
       document.querySelector('.home').setAttribute('id', 'active')
       document.querySelector('.habilidades').removeAttribute('id', 'active')
       document.querySelector('.projetos').removeAttribute('id', 'active')
