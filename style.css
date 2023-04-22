@@ -14,7 +14,7 @@ html{
 }
 
 body {
-    background-color: #0d1b2a;
+    background-color: #023047;
 }
 
 /* navbar */
@@ -166,7 +166,7 @@ a .trabalhar-juntos {
 
 .trabalhar-juntos:hover {
     transform: scale(1.1);
-    background-color: #0d1b2a;
+    background-color: #023047;
 }
 
 /* habilidades */
@@ -238,6 +238,7 @@ a .trabalhar-juntos {
     align-items: center;
     gap: 15px;
     grid-auto-rows: 1fr;
+    margin-top: 50px;
 }
 
 .conteudo-projetos-ver-mais {
@@ -255,49 +256,94 @@ a .trabalhar-juntos {
 
 #projetos i {
     font-size: 38px;
+    color: #48bfe3;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #0d1b2a;
 }
 
-.box a button {
+/* .box a button {
     padding: 10px;
-    color: #8d99ae;
+    color: #EDF2F4;
     border-radius: 2px;
     border: none;
-    background-color: #48bfe3;
-    color: #000;
+    background-color: #3c096c;
 }
 
 .box a button:hover {
     cursor: pointer;
     transform: scale(1.1);
-}
+} */
 
-#projetos .box {
+/* #projetos .box {
     background-color: #EDF2F4;
     border-radius: 10px;
     padding: 30px 20px;
     box-shadow: 0px 3px 25px #000;
+} */
+
+#projetos .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
-#projetos img {
+.camada {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #48bfe3);
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: height 0.5s;
+    padding: 0 40px;
+}
+
+.camada h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #0d1b2a;
+}
+
+.camada p{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+#projetos .box:hover .camada{
+    height: 100%;
+}
+
+.box img {
     width: 100%;
     display: block;
-    visibility: hidden;
+    transform: scale(1.05);
+    transition: transform .5s;
 }
 
-#projetos .img1 {
-    visibility: visible;
+#projetos .box:hover img{
+    transform: scale(1.1);
 }
 
 #projetos h2 {
     font-size: 50px;
     color: #48bfe3;
     text-align: center;
-    margin-bottom: 50px;
 }
 
-#projetos h3 {
-    font-size: 25px;
-}
 
 #projetos h2 span {
     color: #3d535f;
@@ -327,6 +373,7 @@ a .trabalhar-juntos {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    background-color: #0d1b2a;
 }
 
 .sobre-img img{
@@ -366,6 +413,7 @@ a .trabalhar-juntos {
 #contato {
     text-align: center;
     width: 100%;
+    background-color: #0d1b2a;
 }
 
 #contato .titulo-box {
