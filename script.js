@@ -8,9 +8,9 @@ parentContainer.addEventListener('click', event => {
 
   if (!isReadMoreBtn) return
 
-  const currentText = event.target.parentNode.querySelector('.box-projetos-read-more')
+  const currentText = event.target.parentNode.querySelector('.conteudo-projetos-ver-mais')
 
-  currentText.classList.toggle('box-projetos-read-more--show')
+  currentText.classList.toggle('conteudo-projetos-ver-mais--show')
 
   current.textContent = current.textContent.includes('Ver Mais') ? "Ver Menos" : 'Ver Mais'
 
