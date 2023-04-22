@@ -164,7 +164,7 @@ a .trabalhar-juntos {
     font-size: 30px;
 }
 
-button:hover {
+.trabalhar-juntos:hover {
     transform: scale(1.1);
     background-color: #0d1b2a;
 }
@@ -254,17 +254,38 @@ button:hover {
 }
 
 #projetos i {
-    font-size: 30px;
+    font-size: 38px;
+}
+
+.box a button {
+    padding: 10px;
+    color: #8d99ae;
+    border-radius: 2px;
+    border: none;
+    background-color: #48bfe3;
+    color: #000;
+}
+
+.box a button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #projetos .box {
     background-color: #EDF2F4;
     border-radius: 10px;
     padding: 30px 20px;
+    box-shadow: 0px 3px 25px #000;
 }
 
 #projetos img {
+    width: 100%;
+    display: block;
     visibility: hidden;
+}
+
+#projetos .img1 {
+    visibility: visible;
 }
 
 #projetos h2 {
@@ -272,6 +293,10 @@ button:hover {
     color: #48bfe3;
     text-align: center;
     margin-bottom: 50px;
+}
+
+#projetos h3 {
+    font-size: 25px;
 }
 
 #projetos h2 span {
@@ -294,7 +319,6 @@ button:hover {
     box-shadow: 0px 3px 25px #8d99ae;
     color: #0d1b2a; 
 }
-
 
 /* sobre */
 
