@@ -643,6 +643,9 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 920px) {
+    #home {
+        height: 100vh;
+    }
     #about {
         grid-template-columns: 1fr;
     }
@@ -658,6 +661,12 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 820px) {
+    .social i{
+        font-size: 40px;
+    }
+    #skills {
+        padding: 0 20px;
+    }
     #menu-icon {
         display: block;
     }
