@@ -668,6 +668,7 @@ input::-webkit-inner-spin-button {
 
 @media (max-width: 820px) {
     .camada {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), #90e0ef);
         height: 100%;
     }
     .conteudo h1 br {
