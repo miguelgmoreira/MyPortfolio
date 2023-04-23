@@ -655,11 +655,11 @@ input::-webkit-inner-spin-button {
     #about {
         grid-template-columns: 1fr;
     }
-    #about {
+    .sobre-img{
         text-align: center;
         order: 2;
     }
-    #about img {
+    .sobre-img img {
         width: 100%;
         height: auto;
         max-width: 100%;
