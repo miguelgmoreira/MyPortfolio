@@ -1,4 +1,4 @@
-const parentContainer = document.querySelector('#projetos')
+const parentContainer = document.querySelector('#projects')
 
 parentContainer.addEventListener('click', event => {
 
@@ -22,48 +22,48 @@ const defaulLink = document.querySelector(".navlist a[href='#home']")
 defaulLink && defaulLink.setAttribute('id', 'active')
 
 let home = document.querySelector('#home')
-let habilidades = document.querySelector('#habilidades')
-let projetos = document.querySelector('#projetos')
-let sobre = document.querySelector('#sobre')
-let contato = document.querySelector('#contato')
+let skills = document.querySelector('#skills')
+let projects = document.querySelector('#projects')
+let about = document.querySelector('#about')
+let contact = document.querySelector('#contact')
 
 window.addEventListener('scroll', () => {
   var windo = window.pageYOffset
 
-  if (habilidades.offsetTop <= windo && projetos.offsetTop > windo) {
-      document.querySelector('.habilidades').setAttribute('id', 'active')
-      document.querySelector('.sobre').removeAttribute('id', 'active')
-      document.querySelector('.projetos').removeAttribute('id', 'active')
-      document.querySelector('.contato').removeAttribute('id', 'active')
+  if (skills.offsetTop <= windo && projects.offsetTop > windo) {
+      document.querySelector('.skills').setAttribute('id', 'active')
+      document.querySelector('.about').removeAttribute('id', 'active')
+      document.querySelector('.projects').removeAttribute('id', 'active')
+      document.querySelector('.contact').removeAttribute('id', 'active')
       document.querySelector('.home').removeAttribute('id', 'active')
   }
-  else if (projetos.offsetTop <= windo && sobre.offsetTop > windo) {
-      document.querySelector('.projetos').setAttribute('id', 'active')
-      document.querySelector('.habilidades').removeAttribute('id', 'active')
-      document.querySelector('.sobre').removeAttribute('id', 'active')
-      document.querySelector('.contato').removeAttribute('id', 'active')
+  else if (projects.offsetTop <= windo && about.offsetTop > windo) {
+      document.querySelector('.projects').setAttribute('id', 'active')
+      document.querySelector('.skills').removeAttribute('id', 'active')
+      document.querySelector('.about').removeAttribute('id', 'active')
+      document.querySelector('.contact').removeAttribute('id', 'active')
       document.querySelector('.home').removeAttribute('id', 'active')
   }
-  else if (sobre.offsetTop <= windo && contato.offsetTop > windo) {
-      document.querySelector('.sobre').setAttribute('id', 'active')
-      document.querySelector('.habilidades').removeAttribute('id', 'active')
-      document.querySelector('.projetos').removeAttribute('id', 'active')
-      document.querySelector('.contato').removeAttribute('id', 'active')
+  else if (about.offsetTop <= windo && contact.offsetTop > windo) {
+      document.querySelector('.about').setAttribute('id', 'active')
+      document.querySelector('.skills').removeAttribute('id', 'active')
+      document.querySelector('.projects').removeAttribute('id', 'active')
+      document.querySelector('.contact').removeAttribute('id', 'active')
       document.querySelector('.home').removeAttribute('id', 'active')
   }
-  else if (contato.offsetTop <= windo) {
-      document.querySelector('.contato').setAttribute('id', 'active')
-      document.querySelector('.habilidades').removeAttribute('id', 'active')
-      document.querySelector('.projetos').removeAttribute('id', 'active')
-      document.querySelector('.sobre').removeAttribute('id', 'active')
+  else if (contact.offsetTop <= windo) {
+      document.querySelector('.contact').setAttribute('id', 'active')
+      document.querySelector('.skills').removeAttribute('id', 'active')
+      document.querySelector('.projects').removeAttribute('id', 'active')
+      document.querySelector('.about').removeAttribute('id', 'active')
       document.querySelector('.home').removeAttribute('id', 'active')
   }
   else {
       document.querySelector('.home').setAttribute('id', 'active')
-      document.querySelector('.habilidades').removeAttribute('id', 'active')
-      document.querySelector('.projetos').removeAttribute('id', 'active')
-      document.querySelector('.contato').removeAttribute('id', 'active')
-      document.querySelector('.sobre').removeAttribute('id', 'active')
+      document.querySelector('.skills').removeAttribute('id', 'active')
+      document.querySelector('.projects').removeAttribute('id', 'active')
+      document.querySelector('.contact').removeAttribute('id', 'active')
+      document.querySelector('.about').removeAttribute('id', 'active')
   }
 })
 
@@ -77,13 +77,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
   function success() {
     form.reset();
-    status.classList.add("sucesso");
-    status.innerHTML = "Enviado!";
+    status.classList.add("success");
+    status.innerHTML = "Thanks!";
   }
 
   function error() {
-    status.classList.add("erro");
-    status.innerHTML = "Oops! Ocorreu um erro.";
+    status.classList.add("error");
+    status.innerHTML = "Oops! There was a problem.";
   }
 
   form.addEventListener("submit", function (ev) {
@@ -106,4 +106,19 @@ function ajax(method, url, data, success, error) {
     }
   };
   xhr.send(data);
+}
+
+// menu toggle
+
+let menu = document.querySelector('#menu-icon')
+let navlist = document.querySelector('.navlist')
+
+menu.onclick = () => {
+  menu.classList.toggle('bx-x')
+  navlist.classList.toggle('open')
+}
+
+window.onscroll = () => {
+  menu.classList.remove('bx-x')
+  navlist.classList.remove('open')
 }
