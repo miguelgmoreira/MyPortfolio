@@ -195,6 +195,10 @@ a .trabalhar-juntos {
     padding-bottom: 30px;
 }
 
+#skills h2 span {
+    color: #3d535f;
+}
+
 .skill-main{
     width: 100%;
     display: grid;
@@ -328,7 +332,7 @@ a .trabalhar-juntos {
 /* projetos */
 #projects {
     text-align: center;
-
+    height: 100vh;
 }
 
 .conteudo-projetos {
@@ -453,6 +457,7 @@ a .trabalhar-juntos {
     align-items: center;
     gap: 1.5rem;
     background-color: #0d1b2a;
+    height: 100vh;
 }
 
 .sobre-img img{
@@ -650,6 +655,12 @@ input::-webkit-inner-spin-button {
 @media (max-width: 920px) {
     #home {
         height: 100vh;
+    }
+    #projects {
+        height: 100%;
+    }
+    #about {
+        height: 100%;
     }
     #about {
         grid-template-columns: 1fr;

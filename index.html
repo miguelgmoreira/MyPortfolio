@@ -52,7 +52,7 @@
     </section>
     <!-- skills -->
     <section id="skills">
-        <h2>Skills</h2>
+        <h2><span>S</span>kills</h2>
         <div class="skill-main">
             <div class="skill-bar">
                 <div class="info">
@@ -228,24 +228,24 @@
 
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" maxlength="18" required>
                     </div>
 
                     <div class="form-group">
                         <label for="telefone">Telephone <i class="fa-solid fa-phone"
                                 style="color: #34a853;"></i></label>
-                        <input type="number" name="telefone">
+                        <input id="phone" type="tel" name="telefone" autocomplete="tel" minlength="15" required> 
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email <i class="fa-regular fa-envelope" style="color: #ea4335;"></i></label>
-                        <input type="text" name="email">
+                        <input id="email" type="email" name="email" autocomplete="email" required>
                     </div>
 
                     <div class="form-group">
                         <label for="mensagem">Message<i class="fa-regular fa-message"
                                 style="color: #edf2f4;"></i></label>
-                        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea >
                     </div>
 
                     <button type="submit">Send<i class="fa-regular fa-paper-plane"></i></button>
@@ -269,6 +269,8 @@
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/3ce39e5ff7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>
         const efeitoDigitando = new Typed('.texto', {
             strings: ['Miguel', 'Web developer'],
@@ -277,7 +279,10 @@
             backSpeed: 80,
             backDelay: 1500
         })
-
+    </script>
+    <script>
+        // form m     
+        $('#phone').mask('(00) 00000-0000');
     </script>
 </body>
 
