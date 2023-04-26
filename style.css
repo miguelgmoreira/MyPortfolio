@@ -218,6 +218,10 @@ a .trabalhar-juntos {
     font-weight: 500;
 }
 
+.skill-bar .info br {
+    display: none;
+}
+
 .skill-bar .info p:nth-child(2){
     color: #48bfe3;
 }
@@ -720,4 +724,9 @@ input::-webkit-inner-spin-button {
     .navlist.open {
         top: 100%;
     }
+
+    .skill-bar .info br {
+        display: block;
+    }
+
 }
