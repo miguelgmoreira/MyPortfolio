@@ -16,64 +16,12 @@ parentContainer.addEventListener('click', event => {
 
 })
 
-// scrollspy
-
-const defaulLink = document.querySelector(".navlist a[href='#home']")
-defaulLink && defaulLink.setAttribute('id', 'active')
-
-let home = document.querySelector('#home')
-let skills = document.querySelector('#skills')
-let projects = document.querySelector('#projects')
-let about = document.querySelector('#about')
-let contact = document.querySelector('#contact')
-
-window.addEventListener('scroll', () => {
-  var windo = window.pageYOffset
-
-  if (skills.offsetTop <= windo && projects.offsetTop > windo) {
-      document.querySelector('.skills').setAttribute('id', 'active')
-      document.querySelector('.about').removeAttribute('id', 'active')
-      document.querySelector('.projects').removeAttribute('id', 'active')
-      document.querySelector('.contact').removeAttribute('id', 'active')
-      document.querySelector('.home').removeAttribute('id', 'active')
-  }
-  else if (projects.offsetTop <= windo && about.offsetTop > windo) {
-      document.querySelector('.projects').setAttribute('id', 'active')
-      document.querySelector('.skills').removeAttribute('id', 'active')
-      document.querySelector('.about').removeAttribute('id', 'active')
-      document.querySelector('.contact').removeAttribute('id', 'active')
-      document.querySelector('.home').removeAttribute('id', 'active')
-  }
-  else if (about.offsetTop <= windo && contact.offsetTop > windo) {
-      document.querySelector('.about').setAttribute('id', 'active')
-      document.querySelector('.skills').removeAttribute('id', 'active')
-      document.querySelector('.projects').removeAttribute('id', 'active')
-      document.querySelector('.contact').removeAttribute('id', 'active')
-      document.querySelector('.home').removeAttribute('id', 'active')
-  }
-  else if (contact.offsetTop <= windo) {
-      document.querySelector('.contact').setAttribute('id', 'active')
-      document.querySelector('.skills').removeAttribute('id', 'active')
-      document.querySelector('.projects').removeAttribute('id', 'active')
-      document.querySelector('.about').removeAttribute('id', 'active')
-      document.querySelector('.home').removeAttribute('id', 'active')
-  }
-  else {
-      document.querySelector('.home').setAttribute('id', 'active')
-      document.querySelector('.skills').removeAttribute('id', 'active')
-      document.querySelector('.projects').removeAttribute('id', 'active')
-      document.querySelector('.contact').removeAttribute('id', 'active')
-      document.querySelector('.about').removeAttribute('id', 'active')
-  }
-})
-
-
 // form ajax
 
 window.addEventListener("DOMContentLoaded", function () {
 
   var form = document.getElementById("my-form");
-  var status = document.getElementById("status");
+  var status = document.querySelector(".status");
 
   function success() {
     form.reset();

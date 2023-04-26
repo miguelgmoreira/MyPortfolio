@@ -63,12 +63,8 @@ header {
     margin: 0 25px;
 }
 
-.navlist a:hover{
-    color: #48bfe3;
-    border-bottom: 2px solid #48bfe3;
-}
-
-#active {
+header ul li a.active,
+header ul li a:hover {
     color: #48bfe3;
     border-bottom: 2px solid #48bfe3;
 }
@@ -90,7 +86,7 @@ section {
 
 #home {
     position: relative;
-    height: 90vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #EDF2F4;
     display: flex;
@@ -180,8 +176,8 @@ a .trabalhar-juntos {
 
 #skills{
     width: 100%;
-    height: 100vh;
-    padding: 0px 13%;
+    height: 100%;
+    padding: 13% 13%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,7 +332,6 @@ a .trabalhar-juntos {
 /* projetos */
 #projects {
     text-align: center;
-    height: 100vh;
 }
 
 .conteudo-projetos {
@@ -461,7 +456,6 @@ a .trabalhar-juntos {
     align-items: center;
     gap: 1.5rem;
     background-color: #0d1b2a;
-    height: 100vh;
 }
 
 .sobre-img img{
@@ -573,7 +567,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-#status {
+.status {
     width: 90%;
     max-width: 500px;
     text-align: center;
@@ -582,13 +576,13 @@ input::-webkit-inner-spin-button {
     border-radius: 8px;
 }
 
-#status.success {
+.status.success {
     background-color: #38b000;
     color: #EDF2F4;
     animation: status 3s ease forwards;
 }
 
-#status.error {
+.status.error {
     background-color: #d00000;
     color: #EDF2F4;
     animation: status 3s ease forwards;
@@ -632,6 +626,8 @@ input::-webkit-inner-spin-button {
     background-color: #48bfe3;
 }
 
+
+
 @media (max-width:1480px) {
     header {
         padding: 12px 2.5%;
@@ -657,21 +653,9 @@ input::-webkit-inner-spin-button {
         --h2-font:2.2rem;
         --p-font:1rem;
     }
-    #home {
-        height: 87vh;
-    }
 }
 
 @media (max-width: 920px) {
-    #home {
-        height: 100vh;
-    }
-    #projects {
-        height: 100%;
-    }
-    #about {
-        height: 100%;
-    }
     #about {
         grid-template-columns: 1fr;
     }
