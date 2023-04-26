@@ -12,7 +12,7 @@ parentContainer.addEventListener('click', event => {
 
   currentText.classList.toggle('conteudo-projetos-ver-mais--show')
 
-  current.textContent = current.textContent.includes('Ver Mais') ? "Ver Menos" : 'Ver Mais'
+  current.textContent = current.textContent.includes('Ver mais') ? "Ver menos" : 'Ver mais'
 
 })
 
@@ -122,3 +122,6 @@ window.onscroll = () => {
   menu.classList.remove('bx-x')
   navlist.classList.remove('open')
 }
+
+
+
