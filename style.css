@@ -660,7 +660,7 @@ input::-webkit-inner-spin-button {
 
 @media (max-width: 920px) {
     #home {
-        height: 100givh;
+        height: 100vh;
     }
     #projects {
         height: 100%;
