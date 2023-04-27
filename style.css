@@ -641,11 +641,6 @@ input::-webkit-inner-spin-button {
     }
 }
 
-@media (max-height:600px) {
-    section {
-        padding: auto;
-    }
-}
 
 @media (max-width:1100px) {
     :root {
