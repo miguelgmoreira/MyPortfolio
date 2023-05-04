@@ -262,14 +262,14 @@ a .trabalhar-juntos {
     }
 }
 .skill-bar .bar .css{
-    width: 65%;
+    width: 75%;
     animation: css 2s;
 }
 @keyframes css {
     0%{
         width: 0%;
     }100%{
-        width: 65%;
+        width: 75%;
     }
 }
 .skill-bar .bar .node{
