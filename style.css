@@ -239,26 +239,26 @@ a .trabalhar-juntos {
 }
 
 .skill-bar .bar .javascript{
-    width: 75%;
+    width: 70%;
     animation: javascript 2s;
 }
 @keyframes javascript {
     0%{
         width: 0%;
     }100%{
-        width: 75%;
+        width: 70%;
     }
 }
 
 .skill-bar .bar .html{
-    width: 70%;
+    width: 75%;
     animation: html 2s;
 }
 @keyframes html {
     0%{
         width: 0%;
     }100%{
-        width: 70%;
+        width: 75%;
     }
 }
 .skill-bar .bar .css{
@@ -272,15 +272,15 @@ a .trabalhar-juntos {
         width: 75%;
     }
 }
-.skill-bar .bar .node{
-    width: 40%;
-    animation: node 2s;
+.skill-bar .bar .react{
+    width: 65%;
+    animation: react 2s;
 }
-@keyframes node {
+@keyframes react {
     0%{
         width: 0%;
     }100%{
-        width: 40%;
+        width: 65%;
     }
 }
 .skill-bar .bar .communication{
@@ -295,25 +295,25 @@ a .trabalhar-juntos {
     }
 }
 .skill-bar .bar .learning{
-    width: 80%;
+    width: 85%;
     animation: learning 2s;
 }
 @keyframes learning {
     0%{
         width: 0%;
     }100%{
-        width: 80%;
+        width: 85%;
     }
 }
 .skill-bar .bar .team-work{
-    width: 60%;
+    width: 70%;
     animation: team-work 2s;
 }
 @keyframes team-work {
     0%{
         width: 0%;
     }100%{
-        width: 60%;
+        width: 70%;
     }
 }
 .skill-bar .bar .creativity{
