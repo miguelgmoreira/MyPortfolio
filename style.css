@@ -184,14 +184,7 @@ a .trabalhar-juntos {
     flex-direction: column;
 }
 
-#skills h2{
-    font-size: var(--h2-font);
-    color: #48bfe3;
-    text-align: center;
-    padding-bottom: 30px;
-}
-
-#skills h2 span {
+h2 span {
     color: #3d535f;
 }
 
@@ -218,8 +211,8 @@ a .trabalhar-juntos {
     display: none;
 }
 
-.skill-bar .info p:nth-child(2){
-    color: #48bfe3;
+.icon {
+    font-size: 24px;
 }
 
 .skill-bar .bar{
@@ -231,103 +224,22 @@ a .trabalhar-juntos {
     position: relative;
 }
 .skill-bar .bar span{
-    width: 50%;
+    width: 100%;
     height: 100%;
     position: absolute;
     background-color: #fb5607;
     border-radius: 25px;
+    animation: bar 2s;
 }
 
-.skill-bar .bar .javascript{
-    width: 70%;
-    animation: javascript 2s;
-}
-@keyframes javascript {
-    0%{
-        width: 0%;
-    }100%{
-        width: 70%;
-    }
-}
 
-.skill-bar .bar .html{
-    width: 75%;
-    animation: html 2s;
-}
-@keyframes html {
+@keyframes bar {
     0%{
         width: 0%;
     }100%{
-        width: 75%;
+        width: 100%;
     }
 }
-.skill-bar .bar .css{
-    width: 75%;
-    animation: css 2s;
-}
-@keyframes css {
-    0%{
-        width: 0%;
-    }100%{
-        width: 75%;
-    }
-}
-.skill-bar .bar .react{
-    width: 65%;
-    animation: react 2s;
-}
-@keyframes react {
-    0%{
-        width: 0%;
-    }100%{
-        width: 65%;
-    }
-}
-.skill-bar .bar .communication{
-    width: 90%;
-    animation: communication 2s;
-}
-@keyframes communication {
-    0%{
-        width: 0%;
-    }100%{
-        width: 90%;
-    }
-}
-.skill-bar .bar .learning{
-    width: 85%;
-    animation: learning 2s;
-}
-@keyframes learning {
-    0%{
-        width: 0%;
-    }100%{
-        width: 85%;
-    }
-}
-.skill-bar .bar .team-work{
-    width: 70%;
-    animation: team-work 2s;
-}
-@keyframes team-work {
-    0%{
-        width: 0%;
-    }100%{
-        width: 70%;
-    }
-}
-.skill-bar .bar .creativity{
-    width: 85%;
-    animation: creativity 2s;
-}
-@keyframes creativity {
-    0%{
-        width: 0%;
-    }100%{
-        width: 85%;
-    }
-}
-
 
 /* projetos */
 #projects {
@@ -420,15 +332,10 @@ a .trabalhar-juntos {
     transform: scale(1.1);
 }
 
-#projects h2 {
+ h2 {
     font-size: var(--h2-font);
     color: #48bfe3;
     text-align: center;
-}
-
-
-#projects h2 span {
-    color: #3d535f;
 }
 
 .read-more-btn {
@@ -465,17 +372,6 @@ a .trabalhar-juntos {
     box-shadow: 0px 3px 25px #48bfe3;
 }
 
-
-.about-box h2 {
-    font-size: var(--h2-font);
-    color: #48bfe3;
-    margin-bottom: 50px;
-}
-
-.about-box h2 span {
-    color: #3d535f;
-}
-
 .about-box h3 {
     color: #48bfe3;
 }
@@ -493,16 +389,6 @@ a .trabalhar-juntos {
     text-align: center;
     width: 100%;
     background-color: #0d1b2a;
-}
-
-#contact h2 {
-    font-size: var(--h2-font);
-    color: #48bfe3;
-    text-align: center;
-}
-
-#contact h2 span {
-    color: #3d535f;
 }
 
 .form-container {
